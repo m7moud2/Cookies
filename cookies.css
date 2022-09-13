@@ -1,0 +1,107 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+  
+  button {
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+  
+  .custom-modal {
+    padding: 15px;
+    position: fixed;
+    border: 1px solid #aaa;
+    background-color: #efefef;
+    border-radius: 4px;
+  }
+  
+  @keyframes bottom-up {
+    0% {
+      transform: translateY(200px);
+    }
+    
+    100% {
+      transform: translateY(0px);
+    } 
+  }
+  
+  .bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: bottom-up 2s;
+  }
+  
+  @keyframes right-in {
+    0% {
+      transform: translateX(250px);
+    }
+    
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  .right {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 250px;
+    animation: right-in 2s;
+  }
+  
+  @keyframes left-in {
+    0% {
+      transform: translateX(-250px);
+    }
+    
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  .left {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 250px;
+    animation: left-in 2s;
+  }
+  
+  @keyframes top-down {
+    0% {
+      transform: translateY(-200px);
+    }
+    
+    100% {
+      transform: translateY(0px);
+    } 
+  }
+  
+  .top {
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: top-down 2s;
+    .contents {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes spin-out {
+    0% {
+      transform: translate(0) rotate(0deg);
+    }
+    
+    100% {
+     transform: translate(150%, -150%) rotate(2000deg);
+    }
+  }
+  
+  .stop {
+    animation: spin-out 4s;
+    transform: translate(200%,200%);
+  }
